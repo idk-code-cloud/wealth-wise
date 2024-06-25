@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Optional, List
 
 
-class Repository[T](ABC):
+class BaseRepository[T](ABC):
     @abstractmethod
     async def get_by_id(self, id: int) -> Optional[T]:
         raise NotImplementedError
